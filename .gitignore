@@ -54,6 +54,7 @@ user_path_config-deprecated.txt
 /auth.json
 .DS_Store
 /.venv
-ldm_patched/modules/sd.py
-modules/util.py
-web
+/ldm_patched/modules/sd.py
+/modules/util.py
+/web
+/tkinter_standalone
