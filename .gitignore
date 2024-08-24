@@ -56,3 +56,4 @@ user_path_config-deprecated.txt
 /.venv
 /ldm_patched/modules/sd.py
 /modules/util.py
+/web
