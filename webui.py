@@ -6,6 +6,7 @@ import time
 import shared
 import modules.config
 import fooocus_version
+import api.http_server
 import modules.html
 import modules.async_worker as worker
 import modules.constants as constants
@@ -1298,6 +1299,7 @@ with shared.gradio_root:
                       outputs=[prompt, style_selections], show_progress=True, queue=True) \
                 .then(fn=style_sorter.sort_styles, inputs=style_selections, outputs=style_selections, queue=False, show_progress=False) \
                 .then(lambda: None, _js='()=>{refresh_style_localization();}')
+    with gr.Row():
         perf_monitor = gr.HTML(load_page('templates/perf-monitor/index.html'))
 
 
