@@ -513,3 +513,12 @@ def get_image_size_info(image: np.ndarray, aspect_ratios: list) -> str:
         return size_info
     except Exception as e:
         return f'Error reading image: {e}'
+    
+def load_page(filename):
+    """Load an HTML file as a string and return it"""
+    file_path = os.path.join("web", filename)
+
+    with open(file_path, 'r') as file:
+        content = file.read()
+
+    return content
